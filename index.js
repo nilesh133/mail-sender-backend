@@ -11,12 +11,11 @@ const app = express()
 const PORT = process.env.PORT || 5000;
 
 const corsOptions = {
-    origin: "https://mail-sender-frontend-nilesh133s-projects.vercel.app",
-    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
-    credentials: true,
-};
+    origin: "*",
+    method: ["GET", "POST"]
+}
 
-app.use(cors(corsOptions));
+app.use(cors(corsOptions))
 app.use(bodyParser.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
