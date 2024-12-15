@@ -77,6 +77,9 @@ Nilesh Prajapati`,
     }
 });
 
+app.get("/", (req, res) => {
+    res.send("Hello world");
+})
 
 // Start server
 app.listen(PORT, () => {
